@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming soon - Muout</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/docs.css">
+
+    <!-- bootstrap-icon -->
+    <link rel="stylesheet" href="css/all.css">
+
+    <!-- animation -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- media -->
+    <link rel="stylesheet" href="css/media.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div id="loader"></div>
+
+    <!-- main -->
+
+    <section class="coming-bg wow fadeIn" data-wow-duration="1s" style="overflow-x: hidden;">
+        <div class="black-box"></div>
+        <div class="container">
+            <div class="fix-part text-center text-white">
+                <h2 class="text-uppercase mb-3 wow bounceIn">
+                    coming soon
+                </h2>
+                <div id="timer"></div>
+                <div class="com-btn d-flex justify-content-center">
+                    <a class="btn border-0 p-0 text-uppercase text-white bg-main d-flex justify-content-center align-items-center"
+                        href="index.html" role="button">back to
+                        home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- all -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- animation -->
+    <script src="js/wow.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        // loader js 
+
+        $('#loader').show();
+
+        setTimeout(function () {
+            $('#loader').fadeOut('slow', function () {
+                $('#content').fadeIn('slow');
+            });
+        }, 1000);
+
+        // timer
+
+        function updateTimer() {
+            future = Date.parse("octomer 30, 2024 12:00:00");
+            now = new Date();
+            diff = future - now;
+
+            days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            hours = Math.floor(diff / (1000 * 60 * 60));
+            mins = Math.floor(diff / (1000 * 60));
+            secs = Math.floor(diff / 1000);
+
+            d = days;
+            h = hours - days * 24;
+            m = mins - hours * 60;
+            s = secs - mins * 60;
+
+            document.getElementById("timer")
+                .innerHTML =
+                '<div>' + d + '<span>Days</span></div>' +
+                '<div>' + h + '<span>Hours</span></div>' +
+                '<div>' + m + '<span>Minutes</span></div>' +
+                '<div>' + s + '<span>Seconds</span></div>';
+        }
+        setInterval('updateTimer()', 100);
+
+    </script>
+
+</body>
+
+</html>

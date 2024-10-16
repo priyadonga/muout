@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour list - Muout</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/docs.css">
+
+    <!-- bootstrap-icon -->
+    <link rel="stylesheet" href="css/all.css">
+
+    <!-- animation -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- media -->
+    <link rel="stylesheet" href="css/media.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div id="loader"></div>
+
+    <!-- header -->
+
+    <header>
+        <nav class="navbar navbar-main navbar-expand-lg p-0">
+            <div class="container-fluid">
+                <div class="col-5">
+                    <ul class="navbar-nav text-uppercase">
+                        <li class="nav-item pe-4 d-flex align-items-center">
+                            <a aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center">
+                            <div class="dropdown">
+                                <a class="btn p-0 border-0" role="button">
+                                    Pages<i class="bi bi-chevron-down ms-2"></i>
+                                </a>
+                                <ul class="dropdown-menu py-0 rounded-0 border-0">
+                                    <li><a class="dropdown-item border-bottom border-main"
+                                            href="gallery.html">Gallery</a></li>
+                                    <li><a class="dropdown-item border-bottom border-main" href="price.html">Pricing</a>
+                                    </li>
+                                    <li><a class="dropdown-item border-bottom border-main bg-black text-white"
+                                            href="tour.html">Tour
+                                            List</a></li>
+                                    <li><a class="dropdown-item" href="coming.html">Coming soon</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item px-4 d-flex align-items-center">
+                            <a aria-current="page" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <a href="index.html">
+                        <div class="logo d-flex justify-content-center">
+                            <img src="img/logo.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-5 d-flex justify-content-end">
+                    <div class="header-btn">
+                        <a href="contact.html"
+                            class="btn text-uppercase text-white bg-main d-flex justify-content-center align-items-center">inquiry
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- header-responsive -->
+
+    <header>
+        <nav class="navbar navbar-responsive navbar-expand-lg p-0">
+            <div class="container">
+                <div class="col-10">
+                    <a href="index.html">
+                        <div class="logo">
+                            <img src="img/logo.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="col-2 d-flex justify-content-end">
+                    <button class="btn modal-btn border-0 p-0" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <i class="bi bi-list fs-4"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- offcanvas -->
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <a class="nav-link active me-5" aria-current="page" href="index.html">Home</a>
+                <!-- dropdown start-->
+                <div class="dropdown">
+                    <span>Pages</span>
+                    <a class="btn border-0 p-0 my-4" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="bi bi-chevron-down ms-5 text-black"></i>
+                    </a>
+                    <ul class="dropdown-menu border-0 py-0" style="transform: translate(-37rem, 52px) !important;">
+                        <li><a class="dropdown-item py-3" href="gallery.html">Gallery</a></li>
+                        <li><a class="dropdown-item py-3" href="price.html">Pricing</a>
+                        </li>
+                        <li><a class="dropdown-item py-3 text-main" href="tour.html">Tour
+                                List</a></li>
+                        <li><a class="dropdown-item py-3" href="coming.html">Coming soon</a></li>
+                    </ul>
+                </div>
+                <!-- dropdown end -->
+                <a class="nav-link active me-5" aria-current="page" href="about.html">About</a>
+                <a class="nav-link active me-5 my-4" aria-current="page" href="blog.html">Blog</a>
+                <a class="nav-link active me-5" aria-current="page" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- main -->
+
+    <section class="top top-img wow fadeIn" data-wow-duration="1s">
+        <div class="top-text">
+            <div class="text-inner">
+                <h2 class="text-uppercase text-white mt-0">Tour list</h2>
+                <div class="d-flex text-white justify-content-center">
+                    <a href="index.html"><i class="fa-solid fa-house"></i></a>
+                    <p class="mb-0"><span class="mx-1">/</span>Tour list</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- tour-page -->
+
+    <section class="tour-page all-margin">
+        <div class="container">
+            <div class="text-up text-center wow bounceIn">
+                <h3 class="text-uppercase text-decoration-underline">Upcoming Tour</h3>
+                <p>It is a long established fact that a reader will be distracted by the readable
+                    content of a page when
+                    looking at its layout.</p>
+            </div>
+            <!-- 1 -->
+            <div class="row top-row">
+                <div class="col-12 py-4 border-bottom border-price-inner">
+                    <div class="row align-items-center">
+                        <div class="col-1 border-end border-price-inner">
+                            <h4 class="text-uppercase">10 jan</h4>
+                        </div>
+                        <div class="col-9 px-4">
+                            <h4 class="text-uppercase mb-0">Videotron Center</h4>
+                            <p class="mb-0">Manhadtan, NY, United States</p>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end pe-0">
+                            <a href="#" class="btn p-0 rounded-0 text-uppercase border-0 border-bottom border-black">
+                                buy tickets
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="col-12 py-4 border-bottom border-price-inner">
+                    <div class="row align-items-center">
+                        <div class="col-1 border-end border-price-inner">
+                            <h4 class="text-uppercase">12 jan</h4>
+                        </div>
+                        <div class="col-9 px-4">
+                            <h4 class="text-uppercase mb-0">Spotify On Stage</h4>
+                            <p class="mb-0">Colosseum, Italy</p>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end pe-0">
+                            <a href="#" class="btn p-0 rounded-0 text-uppercase border-0 border-bottom border-black">
+                                buy tickets
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="col-12 py-4 border-bottom border-price-inner">
+                    <div class="row align-items-center">
+                        <div class="col-1 border-end border-price-inner">
+                            <h4 class="text-uppercase">14 jan</h4>
+                        </div>
+                        <div class="col-9 px-4">
+                            <h4 class="text-uppercase mb-0">Halloween Bitchy Land</h4>
+                            <p class="mb-0">Paris, France</p>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end pe-0">
+                            <a href="#" class="btn p-0 rounded-0 text-uppercase border-0 border-bottom border-black">
+                                buy tickets
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="col-12 py-4">
+                    <div class="row align-items-center">
+                        <div class="col-1 border-end border-price-inner">
+                            <h4 class="text-uppercase">16 jan</h4>
+                        </div>
+                        <div class="col-9 px-4">
+                            <h4 class="text-uppercase mb-0">Cornelius - Singha Light </h4>
+                            <p class="mb-0">Colosseum, Italy</p>
+                        </div>
+                        <div class="col-2 d-flex justify-content-end pe-0">
+                            <a href="#" class="btn p-0 rounded-0 text-uppercase border-0 border-bottom border-black">
+                                buy tickets
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+    <section class="footer">
+        <div class="container">
+
+            <div class="row padding-footer">
+
+                <!-- 1 -->
+                <div class="col-3">
+                    <a href="index.html">
+                        <div class="logo">
+                            <img src="img/logo.svg" alt="">
+                        </div>
+                    </a>
+                    <ul class="p-0 m-0">
+                        <li class="list-group-item text-white">Arp-48 Mor Street, Brooklyn, <br>
+                            NY 11201, UK</li>
+                        <li class="list-group-item my-3"><a href="index.html"
+                                class="text-decoration-none text-capitalize">info@muout.com</a></li>
+                        <li class="list-group-item"><a href="index.html" class="text-decoration-none">+1 558 989
+                                9987</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 2 -->
+                <div class="col-3 hide-footer">
+                    <div>
+                        <a href="#" class="text-decoration-none">
+                            <h4 class="text-white fw-normal text-uppercase">info</h4>
+                        </a>
+                        <ul class="p-0 m-0">
+                            <li class="list-group-item"><a href="about.html" class="text-decoration-none">About</a>
+                            </li>
+                            <li class="list-group-item my-3"><a href="#" class="text-decoration-none">History</a>
+                            </li>
+                            <li class="list-group-item"><a href="price.html" class="text-decoration-none">Pricing
+                                    Plan</a>
+                            </li>
+                            <li class="list-group-item my-3"><a href="blog.html" class="text-decoration-none">Blog</a>
+                            </li>
+                            <li class="list-group-item"><a href="contact.html" class="text-decoration-none">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- accordion2 -->
+                <div class="col-3 hide-footerr">
+                    <div class="accordion">
+                        <div class="accordion-item border-0 rounded-0">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button accordion-footer collapsed justify-content-center p-0 fw-normal text-uppercase"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFooterTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFooterTwo">
+                                    info
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFooterTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body p-0">
+                                    <ul class="p-0 m-0">
+                                        <li class="list-group-item"><a href="about.html"
+                                                class="text-decoration-none">About</a>
+                                        </li>
+                                        <li class="list-group-item my-3"><a href="#"
+                                                class="text-decoration-none">History</a>
+                                        </li>
+                                        <li class="list-group-item"><a href="price.html"
+                                                class="text-decoration-none">Pricing
+                                                Plan</a>
+                                        </li>
+                                        <li class="list-group-item my-3"><a href="blog.html"
+                                                class="text-decoration-none">Blog</a>
+                                        </li>
+                                        <li class="list-group-item"><a href="contact.html"
+                                                class="text-decoration-none">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="col-3 main-col hide-footer mt-992-4">
+                    <div>
+                        <a href="#" class="text-decoration-none">
+                            <h4 class="text-white fw-normal text-uppercase">links</h4>
+                        </a>
+                        <ul class="p-0 m-0">
+                            <li class="list-group-item"><a href="index.html"
+                                    class="text-decoration-none text-capitalize">discography</a></li>
+                            <li class="list-group-item my-3 text-capitalize"><a href="tour.html"
+                                    class="text-decoration-none">tour
+                                    date</a>
+                            </li>
+                            <li class="list-group-item text-capitalize"><a href="index.html"
+                                    class="text-decoration-none">policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- accordion3 -->
+                <div class="col-3 hide-footerr">
+                    <div class="accordion">
+                        <div class="accordion-item border-0 rounded-0">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button accordion-footer collapsed justify-content-center p-0 fw-normal text-uppercase"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFooterThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFooterThree">
+                                    links
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFooterThree" class="accordion-collapse collapse">
+                                <div class="accordion-body p-0">
+                                    <ul class="p-0 m-0">
+                                        <li class="list-group-item"><a href="index.html"
+                                                class="text-decoration-none text-capitalize">discography</a></li>
+                                        <li class="list-group-item my-3"><a href="tour.html"
+                                                class="text-decoration-none text-capitalize">tour date</a>
+                                        </li>
+                                        <li class="list-group-item"><a href="index.html"
+                                                class="text-decoration-none">policy</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="col-3 main-col hide-footer mt-992-4">
+                    <div>
+                        <a href="#" class="text-decoration-none">
+                            <h4 class="text-white fw-normal text-uppercase">newsletter</h4>
+                        </a>
+                        <form id="subscribeForm">
+                            <input type="email" id="email" class="w-100 px-3 mb-3 text-center" placeholder="Enter Email"
+                                required>
+                            <div class="main-btn d-flex justify-content-center align-items-center">
+                                <button type="submit"
+                                    class="btn border-0 text-uppercase text-white bg-main">Subscribe</button>
+                            </div>
+                        </form>
+                        <div id="thanksMessage" class="thanks-message text-center mt-2 text-white"
+                            style="display: none;">Thank you, your sign-up request was successful! Please check your email inbox to confirm.</div>
+                    </div>
+                </div>
+
+                <!-- accordion4 -->
+                <div class="col-3 hide-footerr">
+                    <div class="accordion">
+                        <div class="accordion-item border-0 rounded-0">
+                            <h2 class="accordion-header">
+                                <button
+                                    class="accordion-button accordion-footer collapsed justify-content-center p-0 fw-normal text-uppercase"
+                                    type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseFooterFour" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseFooterFour">
+                                    newsletter
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseFooterFour" class="accordion-collapse collapse">
+                                <div class="accordion-body p-0">
+                                    <form id="subscribeFormAccordion">
+                                        <input type="email" id="email-accordion" class="w-100 px-3 mb-3 text-center"
+                                            placeholder="Enter Email" required>
+                                        <div class="main-btn d-flex justify-content-center align-items-center">
+                                            <button type="submit"
+                                                class="btn border-0 text-uppercase text-white bg-main">Subscribe</button>
+                                        </div>
+                                    </form>
+                                    <div id="thanksMessage-accordion" class="thanks-message text-center mt-2 text-white"
+                                        style="display: none;">Thank you, your sign-up request was successful! Please check your email inbox to confirm.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row border-top border-gray footer-end">
+            <div class="col-12 d-flex justify-content-center py-2 text-white">
+                <p class="mb-0 py-3">© 2024 - Html Theme by Code4rest</p>
+            </div>
+        </div>
+        <div class="fix-btn">
+            <a href="#" class="btn position-fixed rounded-0 border border-1 border-white text-white bg-main">
+                <i class="bi bi-chevron-up"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- all -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- animation -->
+    <script src="js/wow.min.js"></script>
+
+    <!-- bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- custom -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>
